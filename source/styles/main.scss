@@ -19,6 +19,7 @@ div.app-wrap {
 .app-header {
   background-color: $primary-color-dark;
   height: 80px;
+  flex-shrink: 1;
   border-bottom: 2px solid $divider-color;
 
 }
