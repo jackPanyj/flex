@@ -1,10 +1,12 @@
 var gulp = require('gulp');
 var sass = require('gulp-sass');
 var prefixer = require('gulp-autoprefixer');
+var beautify = require('gulp-minify-css');
 gulp.task('sass', function () {
     gulp.src('styles/*.scss')
         .pipe(sass())
         .pipe(prefixer())
+	.pipe(beautify())
         .pipe(gulp.dest('../styles/'));
 })
 
