@@ -35,6 +35,9 @@ div.app-wrap {
   color: white;
   a {
     color: white;
+    background-color: rgba(0,0,0,0.1);
+    padding: 8px 10px;
+    border-radius: 6px;
   }
 }
 .content {
@@ -64,4 +67,5 @@ div.app-wrap {
       padding-bottom: 10px;
     }
   }
+ 
 }
