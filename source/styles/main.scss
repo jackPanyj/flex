@@ -59,6 +59,9 @@ div.app-wrap {
     &:first-child {
       border-left: 0;
     }
+    &:hover {
+      border-bottom: 4px solid $accent-color;  
+    }
     i {
       display: block;
       font-size: 25px;
@@ -67,5 +70,26 @@ div.app-wrap {
       padding-bottom: 10px;
     }
   }
+  a.active {
+    border-bottom: 4px solid $accent-color;
+  }
+}
 
+.siderbar {
+  display: none;
+  background-color: $primary-color;
+  width: 300px;
+  flex-shrink: 1;
+}
+
+@media (min-width: 800px) {
+  .app-header, .app-footer {
+    display: none;
+  }
+  div.app-wrap {
+    flex-direction:row;
+  }
+  .siderbar {
+    display: block;
+  }
 }

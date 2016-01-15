@@ -11,17 +11,21 @@ gulp.task('build', function () {
        .pipe(gulp.dest('..'));
 })
 
-gulp.task('rebuild',['build'],browserSync.reload
-);
+gulp.task('cp',function() {
+    gulp.src('js/*.js')
+    .pipe(gulp.dest('../js'));
+})
 
-gulp.task('browser-sync', ['sass', 'build'], function() {
+gulp.task('rebuild',['build', 'cp'],browserSync.reload);
+
+gulp.task('browser-sync', ['sass', 'build', 'cp'], function() {
     browserSync({
         server: {
             baseDir: "../"
         }
     });
     gulp.watch(['styles/*.scss'], ['sass']);
-    gulp.watch('./**/*.html', ['rebuild']);
+    gulp.watch(['./**/*.html', './js/*.js'], ['rebuild']);
 });
 
 gulp.task('sass', function () {
