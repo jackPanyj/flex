@@ -40,7 +40,7 @@ div.app-wrap {
   background-color: $primary-color;
   height: 80px;
   display: flex;
-  flex-shrink: 1;
+  flex-shrink: 0;
   a {
     text-align: center;
     padding: 15px;
