@@ -1,0 +1,55 @@
+.course {
+	padding: 16px;
+	.card {
+		border-radius: 4px;
+		transition: all 450ms ease-in-out;
+		border: 1px solid rgba(0, 0, 0, 0.2);
+		padding: 10px;
+		box-shadow: 0 1px 10px rgba(0, 0, 0, 0.2);
+		background-color: #fff;
+		margin: 20px 0;
+		text-align: center;
+		img {
+			margin: 0 auto;
+			border: 10px solid rgba(0, 0, 0, 0.2) ;
+			box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
+			max-width: 100%;
+			border-radius: 5px;
+		}
+
+		.text {
+			margin-top: 10px;
+			margin-bottom: 10px;
+			text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
+			word-wrap: break-word;
+		}
+
+		.text::selection {
+			background-color: orange;
+		}
+
+		&:hover {
+			cursor: pointer;
+			box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+		}
+	}
+}
+
+@media (min-width: 1000px) {
+	.course {
+		display: flex;
+		flex-wrap: wrap;
+		.card {
+			margin: 20px;
+			width: calc(50% - 40px);
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.course {
+		.card {
+			width: calc(33.33333% - 40px);
+		}
+	}
+}

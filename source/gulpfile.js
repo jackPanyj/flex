@@ -12,8 +12,8 @@ gulp.task('build', function () {
 })
 
 gulp.task('cp',function() {
-    gulp.src('js/*.js')
-    .pipe(gulp.dest('../js'));
+    gulp.src(['js/*.js', 'assets/*'], {base: '.'})
+    .pipe(gulp.dest('..'));
 })
 
 gulp.task('rebuild',['build', 'cp'],browserSync.reload);

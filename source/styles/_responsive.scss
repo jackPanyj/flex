@@ -1,0 +1,12 @@
+@media (min-width: 800px) {
+  .app-header, .app-footer {
+    display: none;
+  }
+  div.app-wrap {
+    flex-direction:row;
+  }
+  .siderbar {
+    display: flex;
+    flex-direction: column;
+  }
+}
