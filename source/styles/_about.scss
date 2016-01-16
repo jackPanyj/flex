@@ -1,5 +1,12 @@
+@keyframes roll {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(360deg);
+	}
+}
 .about {
-	border: 1px solid red;
 	margin-bottom: 20px;
 	font-size: 15px;
   .background {
@@ -13,12 +20,16 @@
   .avatar {
   	display: block;
   	margin: 0 auto;
-  	margin-top: -130px;
+  	margin-top: -60px;
   	width: 100px;
   	height: 100px;
   	border-radius: 50%;
   	box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
   	border: 1px solid rgba(0, 0, 0, 0.3);
+  	animation: roll 1.5s infinite linear reverse;
+  	&:hover {
+  		animation: none;
+  	}
   }
 
   h1 {
@@ -26,8 +37,57 @@
   	padding-left: 30px;
   	margin-left: 10px;
   	margin-top: 0;
-  	margin-bottom: 24px;
+  	margin-bottom: 10px;
   	color: $primary-color;
   }
 
+  .hobby, .email, .phone {
+  	margin: 0 30px;
+  	font-size: 18px;
+  	line-height: 1.5;
+  	text-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  	p {
+  		margin: 3px;
+  	}
+  }
+
+  .social {
+  	li {
+  		display: inline-block;
+  		margin-right: 20px;
+  		width: 40px;
+  		height: 40px;
+  		border: 1px solid rgba(0, 0, 0, 0.4);
+  		box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+  		border-radius: 50%;
+  		text-align: center;
+  		background-color: $accent-color;
+  	}
+	i {
+		color: white;
+		font-size: 20px;
+		line-height: 40px;
+	}
+  }
+}
+
+@media (min-width: 768px) {
+	.about {
+		text-align: center;
+		font-size: 25px;
+	    .avatar {
+			width: 150px;
+			height: 150px;
+			border-radius: 50%;
+			margin-top: -80px;
+		}
+		h1 {
+			width: 150px;
+			font-size: 40px;
+			margin: 35px auto;
+			border-bottom: 5px solid $primary-color-dark;
+			border-left: none;
+			padding: 0 0 10px;
+		}
+	}
 }
