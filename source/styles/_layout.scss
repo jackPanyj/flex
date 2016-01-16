@@ -20,7 +20,7 @@ div.app-wrap {
   justify-content: space-between;
   background-color: $primary-color-dark;
   height: 80px;
-  flex-shrink: 1;
+  flex-shrink: 0;
   border-bottom: 2px solid $divider-color;
   color: white;
   a {
