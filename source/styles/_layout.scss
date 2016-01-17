@@ -19,7 +19,7 @@ div.app-wrap {
   align-items: center;
   justify-content: space-between;
   background-color: $primary-color-dark;
-  height: 80px;
+  height: 70px;
   flex-shrink: 0;
   border-bottom: 2px solid $divider-color;
   color: white;
@@ -37,7 +37,7 @@ div.app-wrap {
 }
 .app-footer {
   background-color: $primary-color;
-  height: 80px;
+  height: 70px;
   display: flex;
   flex-shrink: 0;
   a {
