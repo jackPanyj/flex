@@ -1,0 +1,96 @@
+.blogs {
+	display: flex;
+	flex-direction: column;
+	.post {
+		margin:10px;
+		border: 1px solid rgba(0, 0, 0, 0.3);
+		display: flex;
+		flex-direction: column;
+		border-radius: 10px;
+		box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+		.p-header {
+			text-align: center;
+			background-color: $primary-color;
+			height: 100px;
+			flex-shrink: 0;
+			border-top-right-radius: 8px;
+			border-top-left-radius: 8px;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			span {
+				text-shadow: 1px 1px 3px rgba(0, 0, 0,0.8);
+				box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+				display: inline-block;
+				font-size: 30px;
+				line-height: 60px;
+				color: white;
+				width: 60px;
+				height: 60px;
+				border-radius: 50%;
+				border: 1px solid rgba(0, 0, 0, 0.5);
+				animation: roll infinite 2s linear;
+				&:hover {
+					animation:none;
+				}
+
+			}
+		}
+		.p-content {
+			padding: 10px;
+			color: rgba(0, 0, 0, 0.8);
+			text-shadow: 0 0 3px rgba(0, 0, 0, 0.15);
+			h1 {
+				margin-top: 0;
+				font-weight: bold;
+			}
+			::selection {
+				background-color: orange;
+			}
+			@at-root {
+				.p-action {
+					padding: 5px 20px;
+					border: 1px solid $accent-color;
+					background-color: #fff;
+					border-radius: 20px;
+					font-size: 15px;
+					box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+					&:hover {
+						background-color: $accent-color;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media (min-width:1068px) {
+	.blogs {
+		width: 700px;
+		margin: 20px auto;
+	}
+}
+
+@media (min-width:1200px) {
+	.blogs {
+		width: 800px;
+		.post {
+			flex-direction: row;
+			.p-header {
+				order: 1;
+				width: 100px;
+				height: auto;
+				border-radius: 0 8px 8px 0;
+			}
+			.p-content {
+				flex-grow: 1;
+				width: 600px;
+				flex-shrink: 0;
+				h1 {
+					font-size: 30px;
+					text-align: center;
+				}
+			}
+		}
+	}
+}
