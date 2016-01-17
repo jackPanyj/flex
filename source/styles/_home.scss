@@ -1,0 +1,67 @@
+.content {
+	padding: 0;
+	position: relative;
+}
+
+.home {
+	position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	background: {
+		image: url('../assets/home-bg.jpg');
+		size: cover;
+		position:center center;
+		repeat:none;
+		attachment: fixed;
+	}
+	.overlay {
+		background-color: rgba(0, 0, 0, 0.6);
+		width: 100%;
+		height: 100%;
+		text-transform: uppercase;
+		color: #fff;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+	}
+	.title {
+		font-size: 40px;
+		margin-top: 0;
+		margin-bottom: 15px;
+		font-weight: 700;
+	}
+
+	.subtitle {
+		font-weight: 300;
+		font-size: 14px;
+		margin-top: 0;
+		margin-bottom: 38px;
+	}
+
+	.name {
+		color: $primary-color;
+
+	}
+
+	button {
+		display: inline-block;
+	    border: none;
+   	    border-radius: 10px;
+    	height: 36px;
+    	min-width: 100px;
+    	font-size: 14px;
+    	color: #fff;
+    	background-color: $primary-color;
+    	text-transform: uppercase;
+		&:hover {
+			background-color: $primary-color-dark;
+		}
+		&:focus {
+			outline: none;
+		}
+    }
+
+}
