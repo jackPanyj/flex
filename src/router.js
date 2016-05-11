@@ -3,9 +3,6 @@ export default function route (router) {
     '/': {
       component: require('./components/Home.vue')
     },
-    '/home': {
-      component: require('./components/Home.vue')
-    },
     '/blog': {
       component: require('./components/Blog.vue')
     },

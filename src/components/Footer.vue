@@ -1,6 +1,6 @@
 <template lang="jade">
   footer
-    a(v-link="'/home'")
+    a(v-link="'/'")
       i.fa.fa-home
       span Home
     a(v-link="'/blog'")
