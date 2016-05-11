@@ -1,11 +1,27 @@
 <template lang="jade">
-  div hello world
+  header-component
+  router-view.app-body
+  footer-component
 </template>
 
+<script>
+  export default {
+    components: {
+      HeaderComponent: require('./components/Header.vue'),
+      FooterComponent: require('./components/Footer.vue')
+    }
+  }
+</script>
 <style lang="scss">
   @import "./stylesheets/bundle";
-  div {
-    color: red;
-    font-size: r(30);
+  body {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    @at-root{
+      .app-body {
+        flex-grow: 1;
+      }
+    }
   }
 </style>
