@@ -20,21 +20,19 @@
     display: flex;
     height: r(160);
     background-color: $primary-color;
+    justify-content: space-around;
     @at-root {
       & > a {
         display: flex;
         align-items: center;
+        width: 100%;
+        height: 100%;
         justify-content: center;
         flex-direction: column;
-        border-right: 1px solid $secondary-text-color;
+        border-right: r(2) solid $secondary-text-color;
         color: $primary-color-text;
         text-decoration: none;
-        border-bottom: r(4) solid transparent;
-        flex-grow: 48.75;
-        &:last-child {
-          border-right: none;
-          flex-grow: 71.75;
-        }
+        border-bottom: r(8) solid transparent;
       }
       i {
         font-size: r(48);
@@ -47,6 +45,6 @@
     }
   }
   .v-link-active {
-    border-bottom: r(4) solid $accent-color;
+    border-bottom: r(8) solid $accent-color;
   }
 </style>
