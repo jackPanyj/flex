@@ -1,15 +1,15 @@
 <template lang="jade">
   footer
-    a(v-link="'/'")
+    a(v-link="{path: '/', exact: true}")
       i.fa.fa-home
       span Home
-    a(v-link="'/blog'")
+    a(v-link="{path: '/blog', exact: true}")
       i.fa.fa-book
       span Blog
-    a(v-link="'/work'")
+    a(v-link="{path: '/work', exact: true}")
       i.fa.fa-diamond
       span Work
-    a(v-link="'/me'")
+    a(v-link="{path: '/me', exact: true}")
       i.fa.fa-user
       span  Me
 </template>

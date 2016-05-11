@@ -8,8 +8,8 @@ module.exports = {
     app: './src/main.js'
   },
   output: {
-    path: config.build.assetsRoot,
-    publicPath: config.build.assetsPublicPath,
+    path: config.build.buildassetsRoot,
+    publicPath: config.build.buildassetsPublicPath,
     filename: '[name].js'
   },
   resolve: {
